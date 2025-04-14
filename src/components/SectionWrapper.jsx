@@ -12,7 +12,6 @@ const SectionWrapper = (props) => {
       </div>
 
       <div className="max-w-[800px] w-full flex flex-col mx-auto gap-10 ">
-
       {children}
       </div>
     </section>

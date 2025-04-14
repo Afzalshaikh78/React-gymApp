@@ -25,6 +25,7 @@ export function generateWorkout(args) {
         ...acc,
         ...[...Array(parseInt(curr)).keys()].map((val) =>
           index === 0 ? "compound" : "accessory"
+          
         ),
       ];
     }, [])
