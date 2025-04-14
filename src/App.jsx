@@ -9,14 +9,22 @@ const App = () => {
    const [poison, setPoison] = useState("individual");
    const [muscles, setMuscles] = useState([]);
   const [goal, setGoal] = useState("strength_power");
+  const [error, setError] = useState(false);
   
   const updateWorkout = () => {
-    if (muscles.length < 1) {
-      return;
-    }
 
+    
+    if (muscles.length < 1) {
+      setError('Please select a muscle group');
+      return;
+    } 
+
+    setError(false)
+
+    
     const newWorkout = generateWorkout({ poison, muscles, goal });
     setWorkout(newWorkout);
+    
 
     // Use a timeout to wait for the new component to render
     setTimeout(() => {
@@ -25,6 +33,8 @@ const App = () => {
         workoutSection.scrollIntoView({ behavior: "smooth" });
       }
     }, 100); // slight delay ensures the DOM has updated
+
+  
   };
 
   return (
@@ -38,6 +48,8 @@ const App = () => {
         setMuscles={setMuscles}
         setGoal={setGoal}
         updateWorkout={updateWorkout}
+        error={error}
+        setError={setError}
       />
       {workout && <Workout workout={workout} />}
     </main>
