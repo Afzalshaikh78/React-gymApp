@@ -1,6 +1,7 @@
 import React from "react";
 import SectionWrapper from "./SectionWrapper";
 import ExerciseCard from "./ExerciseCard";
+import Button from "./Button";
 
 const Workout = (props) => {
   const { workout } = props;
@@ -15,9 +16,14 @@ const Workout = (props) => {
           <ExerciseCard key={exercise.id || i} exercise={exercise} i={i} />
         ))}
       </div>
+      <Button
+        func={() => {
+          window.location.href = "#hero";
+        }}
+        text={"Start Over"}
+      />
     </SectionWrapper>
   );
-    
 };
 
 export default Workout;

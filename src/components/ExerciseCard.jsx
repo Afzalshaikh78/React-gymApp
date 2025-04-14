@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-0
+0;
 export default function ExerciseCard(props) {
   const { exercise, i } = props;
 
