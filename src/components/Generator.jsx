@@ -7,7 +7,7 @@ import Button from "./Button";
 const Header = (props) => {
   const { index, title, description } = props;
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2">
       <div className="flex items-center justify-center gap-2">
         <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400">{index}</p>
         <h4>{title}</h4>
@@ -119,7 +119,7 @@ const Generator = (props) => {
                     updateMuscles(muscleGroup);
                   }}
                   className={
-                    "uppercase cursor-pointer hover:text-blue-500 " +
+                    "uppercase mb-1 cursor-pointer hover:text-blue-500 " +
                     (muscles.includes(muscleGroup) ? "text-blue-400" : "")
                   }
                   key={muscleGroupIndex}
