@@ -9,52 +9,60 @@ const Header = (props) => {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-center gap-2">
-        <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400">{index}</p>
+        <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400">
+          {index}
+        </p>
         <h4>{title}</h4>
       </div>
-        <p className="text-sm p-4 sm:text-base md:text-2xl mx-auto">
-          {description}
-        </p>
-      
+      <p className="text-sm p-4 sm:text-base md:text-2xl mx-auto">
+        {description}
+      </p>
     </div>
-  )
-}
-
+  );
+};
 
 const Generator = (props) => {
-  const { poison, muscles, goal, setPoison, setMuscles, setGoal , updateWorkout, error , setError } = props;
+  const {
+    poison,
+    muscles,
+    goal,
+    setPoison,
+    setMuscles,
+    setGoal,
+    updateWorkout,
+    error,
+    setError,
+  } = props;
   const [showModel, setShowModel] = useState(false);
- 
 
   function toggleModel() {
-    setShowModel(!showModel)
+    setShowModel(!showModel);
   }
 
-            
   function updateMuscles(muscleGroup) {
-     setError(false);
+    setError(false);
     if (muscles.includes(muscleGroup)) {
-      setMuscles(muscles.filter(val => val !== muscleGroup))
-      return 
+      setMuscles(muscles.filter((val) => val !== muscleGroup));
+      return;
     }
-    
+
     if (muscles.length > 2) {
-      setShowModel(false)
-      return
+      setShowModel(false);
+      return;
     }
 
-    if (poison !== 'individual') {
-      setMuscles([muscleGroup])
-      setShowModel(false)
-      return
+    if (poison !== "individual") {
+      setMuscles([muscleGroup]);
+      setShowModel(false);
+      return;
     }
 
-    setMuscles([...muscles, muscleGroup])
+    setMuscles([...muscles, muscleGroup]);
     if (muscles.length === 2) {
-      setShowModel(false)
+      setShowModel(false);
     }
- }
- 
+  }
+
   return (
     <SectionWrapper
       id={"generate"}
@@ -118,10 +126,9 @@ const Generator = (props) => {
                   onClick={() => {
                     updateMuscles(muscleGroup);
                   }}
-                  className={
-                    "uppercase mb-1 cursor-pointer hover:text-blue-500 " +
-                    (muscles.includes(muscleGroup) ? "text-blue-400" : "")
-                  }
+                  className={`capitalize duration-200 cursor-pointer grid border-black ${
+                    muscles.includes(muscleGroup) ? "bg-black" : ""
+                  }`}
                   key={muscleGroupIndex}
                 >
                   <p>{muscleGroup.replaceAll("_", "")}</p>
