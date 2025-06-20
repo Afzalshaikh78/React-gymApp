@@ -127,7 +127,7 @@ const Generator = (props) => {
                     updateMuscles(muscleGroup);
                   }}
                   className={`capitalize duration-200 cursor-pointer grid border-black ${
-                    muscles.includes(muscleGroup) ? "bg-black" : ""
+                    muscles.includes(muscleGroup) ? "bg-blue-400" : ""
                   }`}
                   key={muscleGroupIndex}
                 >
