@@ -8,8 +8,6 @@ https://swolezilla.netlify.app
 📌 Features
 🔍 Search exercises by body part, equipment, or name
 
-🏃 View detailed GIF demonstrations of exercises
-
 📱 Mobile-first responsive design
 
 💡 Clean UI with modern layout
