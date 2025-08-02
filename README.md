@@ -1,5 +1,6 @@
 🏋️‍♂️ React‑gymApp
-A fully responsive React fitness app that allows users to explore exercises, search by body parts, and view animated demonstrations — all powered by an external API.
+
+A fully responsive React fitness app that allows users to explore exercises, search by body parts, and view animated demonstrations.
 
 🔥 Live Demo
 https://swolezilla.netlify.app
