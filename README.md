@@ -10,7 +10,7 @@ https://swolezilla.netlify.app
 
 📱 Mobile-first responsive design
 
-💡 Clean UI with modern layout
+💡 Clean UI with modern layout.
 
 🛠️ Tech Stack:
 
