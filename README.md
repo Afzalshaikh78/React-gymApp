@@ -14,5 +14,7 @@ https://swolezilla.netlify.app
 
 🛠️ Tech Stack:
 
-This project is built using React for building the user interface, with React Router handling seamless navigation between different pages. Axios is used for making HTTP requests to fetch exercise data from a free external public API. The UI is styled with Material UI (MUI), providing a clean, responsive, and modern design. The app is structured with reusable and modular React components to ensure scalability and maintainability.
+This project is built using React for building the user interface, with React Router handling seamless navigation between different pages. Axios is used for making HTTP requests to fetch exercise data from a free external public API. The UI is styled with Material UI (MUI), providing a clean, responsive, and modern design. The app is structured with reusable and modular React components to ensure scalability and maintainability.  
+
+
 
