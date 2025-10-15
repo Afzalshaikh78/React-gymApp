@@ -38,7 +38,7 @@ const App = () => {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white text-sm sm:text-base">
+    <main className="min-h-screen flex flex-col bg-gradient-to-br from-[#325dc1] via-[#28364d] to-[#030d39] text-white text-sm sm:text-base">
       <Hero />
       <Generator
         poison={poison}
